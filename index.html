@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steal A Update | Linki i Wsparcie</title>
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --container-bg: #1f2833;
+            --text-color: #ffffff;
+            --text-muted: #a9a9a9;
+            --accent-color: #45f3ff;
+            --accent-hover: #1f8a94;
+            --tipply-color: #ff4a4a;
+            --discord-color: #5865F2;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-container {
+            max-width: 450px;
+            width: 90%;
+            background-color: var(--container-bg);
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            border: 2px solid rgba(69, 243, 255, 0.1);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-hover), var(--bg-color));
+            border: 3px solid var(--accent-color);
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(69, 243, 255, 0.3);
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 span {
+            color: var(--accent-color);
+        }
+
+        .description {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            color: #ffffff;
+        }
+
+        /* Styl dla Tipply */
+        .btn-tipply {
+            background-color: rgba(255, 74, 74, 0.1);
+            border: 2px solid var(--tipply-color);
+        }
+
+        .btn-tipply:hover {
+            background-color: var(--tipply-color);
+            box-shadow: 0 0 20px rgba(255, 74, 74, 0.4);
+            transform: translateY(-3px);
+        }
+
+        /* Styl dla Discorda */
+        .btn-discord {
+            background-color: rgba(88, 101, 242, 0.1);
+            border: 2px solid var(--discord-color);
+        }
+
+        .btn-discord:hover {
+            background-color: var(--discord-color);
+            box-shadow: 0 0 20px rgba(88, 101, 242, 0.4);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Licznik odwiedzin dla tej konkretnej podstrony */
+        .visitor-counter {
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+        }
+        .visitor-counter span {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- Małe logo / inicjały gry -->
+        <div class="logo-placeholder">SAU</div>
+        
+        <h1>Steal A <span>Update</span></h1>
+        <p class="description">Oficjalne linki społecznościowe oraz wsparcie twórców projektu.</p>
+
+        <div class="links-wrapper">
+            <!-- LINK DO TIPPLY (Wklej swój link w miejsce href) -->
+            <a href="TUTAJ_TWÓJ_LINK_DO_TIPPLY" target="_blank" class="link-card btn-tipply">
+                💰 Wesprzyj na Tipply
+            </a>
+
+            <!-- LINK DO DISCORDA -->
+            <a href="https://discord.gg/qFCCqkKCMj" target="_blank" class="link-card btn-discord">
+                💬 Serwer Discord
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="visitor-counter">
+            Odwiedzin profilu: <span id="links-counter">1</span>
+        </div>
+        <p>&copy; 2026 Steal A Update. Strona stworzona przez <a href="https://github.com/jaivivo" target="_blank">jaivivo</a></p>
+    </footer>
+
+    <!-- Osobny, niezależny licznik LocalStorage dla tej podstrony -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let linkVisits = localStorage.getItem("sau_links_visits");
+            if (linkVisits === null) {
+                linkVisits = 1;
+            } else {
+                linkVisits = parseInt(linkVisits) + 1;
+            }
+            localStorage.setItem("sau_links_visits", linkVisits);
+            document.getElementById("links-counter").innerText = linkVisits;
+        });
+    </script>
+
+</body>
+</html>
