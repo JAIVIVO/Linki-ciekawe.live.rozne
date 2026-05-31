@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steal A Update | Linki i Wsparcie</title>
+    <title>ciekawe.live.rozne linki</title>
     <style>
         :root {
             --bg-color: #0b0c10;
@@ -39,22 +39,6 @@
             border: 2px solid rgba(69, 243, 255, 0.1);
             text-align: center;
             box-sizing: border-box;
-        }
-
-        .logo-placeholder {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--accent-hover), var(--bg-color));
-            border: 3px solid var(--accent-color);
-            border-radius: 50%;
-            margin: 0 auto 20px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #ffffff;
-            box-shadow: 0 0 15px rgba(69, 243, 255, 0.3);
         }
 
         h1 {
@@ -135,58 +119,32 @@
         footer a:hover {
             text-decoration: underline;
         }
-
-        /* Licznik odwiedzin profilu */
-        .visitor-counter {
-            margin-bottom: 10px;
-            font-size: 0.85rem;
-        }
-        .visitor-counter span {
-            color: var(--accent-color);
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
 
     <div class="profile-container">
-        <div class="logo-placeholder">SAU</div>
         
-        <h1>Steal A <span>Update</span></h1>
+        <!-- Nowy nagłówek zgodnie z Twoim życzeniem -->
+        <h1>ciekawe.live.rozne <span>linki</span></h1>
         <p class="description">Oficjalne linki społecznościowe oraz wsparcie twórców projektu.</p>
 
         <div class="links-wrapper">
-            <!-- LINK DO TIPPLY -->
+            <!-- Poprawiony przycisk Tipply -->
             <a href="https://tipply.pl/@ciekawe.live.rozne" target="_blank" class="link-card btn-tipply">
-                💰 Wesprzyj na Tipply
+                💰 Tipply
             </a>
 
-            <!-- LINK DO DISCORDA -->
+            <!-- Poprawiony przycisk Discord -->
             <a href="https://discord.gg/qFCCqkKCMj" target="_blank" class="link-card btn-discord">
-                💬 Serwer Discord
+                💬 Discord Steal A Update!
             </a>
         </div>
     </div>
 
     <footer>
-        <div class="visitor-counter">
-            Odwiedzin profilu: <span id="links-counter">1</span>
-        </div>
         <p>&copy; 2026 Steal A Update. Strona stworzona przez <a href="https://github.com/jaivivo" target="_blank">jaivivo</a></p>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let linkVisits = localStorage.getItem("sau_links_visits");
-            if (linkVisits === null) {
-                linkVisits = 1;
-            } else {
-                linkVisits = parseInt(linkVisits) + 1;
-            }
-            localStorage.setItem("sau_links_visits", linkVisits);
-            document.getElementById("links-counter").innerText = linkVisits;
-        });
-    </script>
 
 </body>
 </html>
