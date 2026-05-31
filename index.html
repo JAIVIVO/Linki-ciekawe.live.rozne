@@ -136,7 +136,7 @@
             text-decoration: underline;
         }
 
-        /* Licznik odwiedzin dla tej konkretnej podstrony */
+        /* Licznik odwiedzin profilu */
         .visitor-counter {
             margin-bottom: 10px;
             font-size: 0.85rem;
@@ -150,15 +150,14 @@
 <body>
 
     <div class="profile-container">
-        <!-- Małe logo / inicjały gry -->
         <div class="logo-placeholder">SAU</div>
         
         <h1>Steal A <span>Update</span></h1>
         <p class="description">Oficjalne linki społecznościowe oraz wsparcie twórców projektu.</p>
 
         <div class="links-wrapper">
-            <!-- LINK DO TIPPLY (Wklej swój link w miejsce href) -->
-            <a href="TUTAJ_TWÓJ_LINK_DO_TIPPLY" target="_blank" class="link-card btn-tipply">
+            <!-- LINK DO TIPPLY -->
+            <a href="https://tipply.pl/@ciekawe.live.rozne" target="_blank" class="link-card btn-tipply">
                 💰 Wesprzyj na Tipply
             </a>
 
@@ -176,7 +175,6 @@
         <p>&copy; 2026 Steal A Update. Strona stworzona przez <a href="https://github.com/jaivivo" target="_blank">jaivivo</a></p>
     </footer>
 
-    <!-- Osobny, niezależny licznik LocalStorage dla tej podstrony -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let linkVisits = localStorage.getItem("sau_links_visits");
